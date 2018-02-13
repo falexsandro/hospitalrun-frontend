@@ -27,7 +27,6 @@ const testCouchServer = function(url) {
       response.on('data', (data) => { dataChunk += data; });
       response.on('end', () => {
         resolve(JSON.parse(dataChunk));
-        console.log('On end of request');
       });
     });
     request.on('error', (err) => reject(err));
@@ -50,5 +49,3 @@ testCouchServer(couchurl)
     console.error('Oops! Looks like CouchDB isn\'t running. CouchDB must be running before you can start HospitalRun.');
     console.error('For help or more info see https://github.com/HospitalRun/hospitalrun-frontend#install');
   });
-
-console.log('Finalizando...');
