@@ -14,7 +14,7 @@
   "scripts": {
     "build": "node script/build.js ",
     "start": "node script/server.js",
-    "test": "./script/test",
+    "test": "node script/test.js",
     "electron-test": "ember electron:test",
     "translation-sync": "babel-node script/translation/sync.js --presets es2015 && eslint --fix app/locales",
     "stylelint": "stylelint 'app/styles/**/*.scss'"
