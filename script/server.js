@@ -39,7 +39,7 @@ testCouchServer(couchurl)
       console.log('Starting ember server');
       child.exec('ember serve', (error, stdout, stderr) => {
         if (error) {
-          console.error('Execution error: ${error}');
+          console.error(`Execution error: ${error}`);
           return;
         }
       });

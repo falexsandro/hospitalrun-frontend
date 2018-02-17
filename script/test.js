@@ -6,7 +6,8 @@ const child = require('child_process');
 
 child.exec('ember test', (error, stdout, stderr) => {
   if (error) {
-    console.error('Ember test execution got error: ${error}');
-    exit 0;
+    console.error(`Ember test execution got error: ${error}`);
+    return;
   }
-})
+});
+
